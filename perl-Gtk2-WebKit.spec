@@ -11,6 +11,7 @@ Summary:    Web content engine library for Gtk2
 Source:     http://www.cpan.org/modules/by-module/Gtk2/%{realname}-%{version}.tar.gz
 Url:        http://search.cpan.org/dist/%{realname}
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires: webkitgtk-devel
 BuildRequires: perl-devel
 BuildRequires: perl(ExtUtils::Depends)
 BuildRequires: perl(ExtUtils::PkgConfig)
