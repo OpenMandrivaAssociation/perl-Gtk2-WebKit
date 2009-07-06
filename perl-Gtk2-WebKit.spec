@@ -1,6 +1,6 @@
 %define realname   Gtk2-WebKit
-%define version    0.04
-%define release    %mkrel 2
+%define version    0.05
+%define release    %mkrel 1
 
 Name:       perl-%{realname}
 Version:    %{version}
