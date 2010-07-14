@@ -1,9 +1,9 @@
 %define upstream_name    Gtk2-WebKit
-%define upstream_version 0.07
+%define upstream_version 0.08
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    Web content engine library for Gtk2
 License:    GPL+ or Artistic
