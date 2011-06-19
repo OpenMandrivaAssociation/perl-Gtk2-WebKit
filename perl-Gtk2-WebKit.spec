@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:    Web content engine library for Gtk2
 License:    GPL+ or Artistic
@@ -14,7 +14,7 @@ Source0:    http://www.cpan.org/modules/by-module/Gtk2/%{upstream_name}-%{upstre
 BuildRequires: perl(ExtUtils::Depends)
 BuildRequires: perl(ExtUtils::PkgConfig)
 BuildRequires: perl(Gtk2)
-BuildRequires: webkitgtk-devel >= 1.2.0-3mdv2010.1
+BuildRequires: webkitgtk-devel >= 1.2.0-3
 # for tests:
 BuildRequires: x11-server-xvfb
 BuildRequires: perl-devel
@@ -33,7 +33,7 @@ supports DOM, XMLHttpRequest, XSLT, CSS, Javascript/ECMAscript and more.
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-%make
+%make OTHERLDFLAGS="-Wl,--as-needed"
 
 #%check
 #XDISPLAY=$(i=1; while [ -f /tmp/.X$i-lock ]; do i=$(($i+1)); done; echo $i)
