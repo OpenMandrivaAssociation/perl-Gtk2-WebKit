@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 5
+Release:	6
 
 Summary:    Web content engine library for Gtk2
 License:    GPL+ or Artistic
