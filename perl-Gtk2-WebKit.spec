@@ -6,7 +6,7 @@ Version:    %perl_convert_version %{upstream_version}
 Release:	6
 
 Summary:    Web content engine library for Gtk2
-License:    GPL+ or Artistic
+License:    LGPLv2.1+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Gtk2/%{upstream_name}-%{upstream_version}.tar.gz
