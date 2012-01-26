@@ -1,24 +1,23 @@
-%define upstream_name    Gtk2-WebKit
+%define	module	Gtk2-WebKit
 %define upstream_version 0.09
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
+Name:		perl-%{module}
+Version:	%perl_convert_version %{upstream_version}
 Release:	6
 
-Summary:    Web content engine library for Gtk2
-License:    LGPLv2.1+ or Artistic
-Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Gtk2/%{upstream_name}-%{upstream_version}.tar.gz
+Summary:	Web content engine library for Gtk2
+License:	LGPLv2.1+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{module}
+Source0:	http://www.cpan.org/modules/by-module/Gtk2/%{module}-%{upstream_version}.tar.gz
 
-BuildRequires: perl(ExtUtils::Depends)
-BuildRequires: perl(ExtUtils::PkgConfig)
-BuildRequires: perl(Gtk2)
-BuildRequires: webkitgtk-devel >= 1.2.0-3
+BuildRequires:	perl(ExtUtils::Depends)
+BuildRequires:	perl(ExtUtils::PkgConfig)
+BuildRequires:	perl(Gtk2)
+BuildRequires:	webkitgtk-devel >= 1.2.0-3
 # for tests:
-BuildRequires: x11-server-xvfb
-BuildRequires: perl-devel
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
+BuildRequires:	x11-server-xvfb
+BuildRequires:	perl-devel
 
 %description
 WebKit is a web content engine, derived from KHTML and KJS from KDE, and
@@ -29,7 +28,7 @@ It is able to display content such as HTML, SVG, XML, and others. It also
 supports DOM, XMLHttpRequest, XSLT, CSS, Javascript/ECMAscript and more.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{module}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -43,15 +42,9 @@ supports DOM, XMLHttpRequest, XSLT, CSS, Javascript/ECMAscript and more.
 #kill $(cat /tmp/.X$XDISPLAY-lock)
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
-%clean
-rm -rf %buildroot
-
 %files
-%defattr(-,root,root)
 %doc Changes
 %{_mandir}/man3/*
-%perl_vendorlib/*
-
+%{perl_vendorlib}/*
