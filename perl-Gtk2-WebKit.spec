@@ -9,6 +9,7 @@ License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Gtk2/%{modname}-%{modver}.tar.gz
+Source1:	perl-Gtk2-WebKit.rpmlintrc
 BuildRequires:	perl(ExtUtils::Depends)
 BuildRequires:	perl(ExtUtils::PkgConfig)
 BuildRequires:	perl(Gtk2)
