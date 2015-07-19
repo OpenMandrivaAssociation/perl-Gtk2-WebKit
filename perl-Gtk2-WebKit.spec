@@ -4,7 +4,7 @@
 Summary:	Web content engine library for Gtk2
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	18
+Release:	19
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
