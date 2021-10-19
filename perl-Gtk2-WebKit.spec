@@ -27,10 +27,10 @@ It is able to display content such as HTML, SVG, XML, and others. It also
 supports DOM, XMLHttpRequest, XSLT, CSS, Javascript/ECMAscript and more.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{modver}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make OTHERLDFLAGS="-Wl,--as-needed"
 
 #%check
@@ -41,10 +41,10 @@ supports DOM, XMLHttpRequest, XSLT, CSS, Javascript/ECMAscript and more.
 #kill $(cat /tmp/.X$XDISPLAY-lock)
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes
 %{perl_vendorlib}/*
-%{_mandir}/man3/*
+%doc %{_mandir}/man3/*
 
