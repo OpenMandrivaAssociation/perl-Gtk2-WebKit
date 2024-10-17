@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{modver}
 Release:	23
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
+Url:		https://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Gtk2/%{modname}-%{modver}.tar.gz
 Source1:	perl-Gtk2-WebKit.rpmlintrc
 BuildRequires:	perl(ExtUtils::Depends)
