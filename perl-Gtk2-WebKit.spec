@@ -10,6 +10,7 @@ Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Gtk2/%{modname}-%{modver}.tar.gz
 Source1:	perl-Gtk2-WebKit.rpmlintrc
+BuildRequires:	make
 BuildRequires:	perl(ExtUtils::Depends)
 BuildRequires:	perl(ExtUtils::PkgConfig)
 BuildRequires:	perl(Gtk2)
