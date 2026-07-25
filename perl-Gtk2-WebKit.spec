@@ -3,12 +3,12 @@
 
 Summary:	Web content engine library for Gtk2
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	23
+Version:	%{modver}
+Release:	24
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Gtk2/%{modname}-%{modver}.tar.gz
+Url:		https://github.com/rafl/gtk2-webkit
+Source0:	https://cpan.metacpan.org/authors/id/F/FL/FLORA/Gtk2-WebKit-%{modver}.tar.gz
 Source1:	perl-Gtk2-WebKit.rpmlintrc
 BuildRequires:	make
 BuildRequires:	perl(ExtUtils::Depends)
